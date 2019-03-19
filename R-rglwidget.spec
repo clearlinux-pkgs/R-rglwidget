@@ -4,25 +4,24 @@
 #
 Name     : R-rglwidget
 Version  : 0.2.1
-Release  : 8
+Release  : 9
 URL      : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Summary  : 'rgl' in 'htmlwidgets' Framework
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-crosstalk
-Requires: R-htmlwidgets
-Requires: R-httpuv
-Requires: R-jsonlite
-Requires: R-manipulateWidget
-Requires: R-rgl
-Requires: R-xtable
+Requires: R-miniUI
+Requires: R-webshot
+Requires: R-xfun
 BuildRequires : R-crosstalk
 BuildRequires : R-htmlwidgets
 BuildRequires : R-httpuv
 BuildRequires : R-jsonlite
 BuildRequires : R-manipulateWidget
+BuildRequires : R-miniUI
 BuildRequires : R-rgl
+BuildRequires : R-webshot
+BuildRequires : R-xfun
 BuildRequires : R-xtable
 BuildRequires : buildreq-R
 
@@ -37,10 +36,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1552867247
+export SOURCE_DATE_EPOCH=1552964556
 
 %install
-export SOURCE_DATE_EPOCH=1552867247
+export SOURCE_DATE_EPOCH=1552964556
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "

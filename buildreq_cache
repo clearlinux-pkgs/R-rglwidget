@@ -4,5 +4,8 @@ R-htmlwidgets
 R-httpuv
 R-jsonlite
 R-manipulateWidget
+R-miniUI
 R-rgl
+R-webshot
+R-xfun
 R-xtable
