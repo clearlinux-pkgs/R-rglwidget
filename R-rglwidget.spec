@@ -4,25 +4,14 @@
 #
 Name     : R-rglwidget
 Version  : 0.2.1
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Summary  : 'rgl' in 'htmlwidgets' Framework
 Group    : Development/Tools
 License  : GPL-2.0
-Requires: R-miniUI
-Requires: R-webshot
-Requires: R-xfun
-BuildRequires : R-crosstalk
-BuildRequires : R-htmlwidgets
-BuildRequires : R-httpuv
-BuildRequires : R-jsonlite
-BuildRequires : R-manipulateWidget
-BuildRequires : R-miniUI
+Requires: R-rgl
 BuildRequires : R-rgl
-BuildRequires : R-webshot
-BuildRequires : R-xfun
-BuildRequires : R-xtable
 BuildRequires : buildreq-R
 
 %description
@@ -35,13 +24,13 @@ been merged into rgl, so it is no longer needed.
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1552964556
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562208649
 
 %install
-export SOURCE_DATE_EPOCH=1552964556
+export SOURCE_DATE_EPOCH=1562208649
 rm -rf %{buildroot}
-export LANG=C
+export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -70,12 +59,12 @@ R CMD INSTALL --preclean --install-tests --built-timestamp=${SOURCE_DATE_EPOCH} 
 cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 %{__rm} -rf %{buildroot}%{_datadir}/R/library/R.css
 %check
-export LANG=C
+export LANG=C.UTF-8
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc  rglwidget || :
+R CMD check --no-manual --no-examples --no-codoc rglwidget || :
 
 
 %files
