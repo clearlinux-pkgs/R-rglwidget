@@ -4,7 +4,7 @@
 #
 Name     : R-rglwidget
 Version  : 0.2.1
-Release  : 14
+Release  : 15
 URL      : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Summary  : 'rgl' in 'htmlwidgets' Framework
@@ -13,6 +13,7 @@ License  : GPL-2.0
 Requires: R-rgl
 BuildRequires : R-rgl
 BuildRequires : buildreq-R
+BuildRequires : util-linux
 
 %description
 been merged into rgl, so it is no longer needed.
@@ -25,10 +26,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562208649
+export SOURCE_DATE_EPOCH=1571890299
 
 %install
-export SOURCE_DATE_EPOCH=1562208649
+export SOURCE_DATE_EPOCH=1571890299
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
