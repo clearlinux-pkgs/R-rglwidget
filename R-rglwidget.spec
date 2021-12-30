@@ -4,7 +4,7 @@
 #
 Name     : R-rglwidget
 Version  : 0.2.1
-Release  : 29
+Release  : 30
 URL      : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/rglwidget_0.2.1.tar.gz
 Summary  : 'rgl' in 'htmlwidgets' Framework
